@@ -22,11 +22,8 @@ plugins:
   - jekyll-feed
   - jekyll-seo-tag
 
-# Analytics
-analytics:
-  provider: "google-gtag"
-  google:
-    tracking_id: "G-TDSDH7652T"
+# Google Analytics
+google_analytics: "G-TDSDH7652T"
 
 # Custom settings
 # (I'm not used to this framework(?)'s organization thingy, yet I had to add some settings.)
