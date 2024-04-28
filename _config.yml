@@ -17,7 +17,7 @@ twitter_username: lusazure
 github_username:  lusazure
 
 # Build settings
-theme: minima
+# theme: minima
 plugins:
   - jekyll-feed
   - jekyll-seo-tag
@@ -37,8 +37,6 @@ collections:
     permalink: /:categories/:title
 
 github: [metadata]
-
-
 
 # Exclude from processing.
 # The following items will not be processed, by default.

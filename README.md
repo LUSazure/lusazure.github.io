@@ -1,1 +1,1 @@
-Uhh, well... I tried to make my own jekyll theme from scratch but realized there's so much to learn... I'm sticking to the minima theme for a while (or forever)
+Back to the drawing board.
