@@ -21,6 +21,7 @@ plugins:
 
 # ✨Theme-dependant settings
 #header_pages:
+
 show_excerpts: true
 
 minima:
@@ -31,9 +32,9 @@ minima:
   - { platform: twitter,  user_url: "https://twitter.com/lusazure" }
   - { platform: youtube,  user_url: "https://www.youtube.com/@lusazure" }
 
-url: https://lusazure.github.io
-disqus:
-  shortname: lusazure-github-io
+#url: https://lusazure.github.io
+#disqus:
+#  shortname: lusazure-github-io
 google-analytics: G-TDSDH7652T
 
 # ✨jekyll settings

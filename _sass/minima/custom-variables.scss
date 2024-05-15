@@ -1,3 +1,16 @@
-// Placeholder to allow overriding predefined variables smoothly.
+/* Custom variables */
+@import "minima/custom/variables";
 
-$base-font-family: "Pretendard-Regular";
+
+/* Override initialized vars */
+$base-font-family: "Pretendard-Regular",
+    "Segoe UI Emoji",
+    "Apple Color Emoji",
+    Roboto,
+    Helvetica,
+    Arial,
+    sans-serif;
+
+
+/* Override skin vars */
+// It's a friggin' hassle. Just override the whole `auto.scss` file.
