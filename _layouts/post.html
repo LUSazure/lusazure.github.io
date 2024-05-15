@@ -40,7 +40,7 @@ layout: base
         {{ content }}
     </div>
 
-    <div class="giscus"></div>
+    {%- include giscus_comments.html -%}
 
     <a class="u-url" href="{{ page.url | relative_url }}" hidden></a>
 </article>
