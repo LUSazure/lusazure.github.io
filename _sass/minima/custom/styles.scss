@@ -8,15 +8,9 @@
 @import url('//fonts.googleapis.com/earlyaccess/nanummyeongjo.css');
 
 
-/* Custom layout */
-img.post-thumbnail {
-    display: inline;
-    position: relative;
-    top: 0%;
-    z-index: 0;
-}
-
-blockquote.warning {
+/* ✨Custom LUS (Yes, that's me!) */
+// I'll slap my nickname onto every class I use often on my posts.
+blockquote.lus-warning {
     color: $custom-warning-color;
     border-color: $custom-warning-color;
     background-image:
@@ -35,7 +29,47 @@ blockquote.warning {
     }
 }
 
-// Scroll bar
+p.lus-noticable-p {
+    text-align: center;
+    padding: 5px 10px;
+    width: fit-content;
+    min-width: 10em;
+    background-color: $custom-background-color;
+    border-radius: 5px;
+    margin: 0 auto $spacing-unit;
+}
+
+div.lus-fitted-images-container {
+    // I stole it from stackoverflow
+    white-space: nowrap;
+    width: 100%;
+    margin-top: 1em;
+    margin-bottom: 15px;
+    display: table;
+
+    div.lus-image {
+        vertical-align: middle;
+        padding: 2px;
+        display: table-cell;
+
+        img {
+            width: 100%;
+            max-width: 100%;
+            min-width: 0;
+        }
+    }
+}
+
+
+/* ✨Custom layout */
+img.post-thumbnail {
+    display: inline;
+    position: relative;
+    top: 0%;
+    z-index: 0;
+}
+
+// Chrome scroll bar
 ::-webkit-scrollbar-track {
     background-color: $custom-background-color;
 }

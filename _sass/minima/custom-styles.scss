@@ -30,7 +30,8 @@ blockquote {
     padding: $spacing-unit * .3 $spacing-unit * .5;
     background-image:
         linear-gradient(to right,
-            rgba(152, 186, 220, 0.2),
+            rgba(176, 132, 204, 0.2),
+            rgba(237, 191, 133, 0.2),
             rgba(209, 239, 170, 0.2),
             rgba(0, 0, 0, 0));
 
@@ -40,6 +41,20 @@ blockquote {
     em {
         font-style: italic;
     }
+}
+
+table {
+    @media screen and (max-width: $on-large) {
+        display: table;
+    }
+}
+
+.wrapper {
+    max-width: calc(#{$content-width});
+}
+
+:lang(ko) {
+    word-break: keep-all;
 }
 
 ::selection {
@@ -89,13 +104,16 @@ blockquote {
 
 .e-content {
     h1 {
-        font-family: "Times New Roman", "Nanum Myeongjo", "Segoe UI Emoji", "Apple Color Emoji", serif;
-        letter-spacing: 0.5em;
+        font-family: "Nanum Myeongjo", "Segoe UI Emoji", "Apple Color Emoji", serif;
+        font-weight: bold;
+        letter-spacing: 0.3em;
         text-align: center;
 
         border-top: 3px solid $border-color-02;
         border-bottom: 0;
         border-radius: 10px 10px 0 0;
+
+        margin: 50px 0 30px 0;
 
         padding: 1vh 10px;
         background-image:
@@ -103,6 +121,15 @@ blockquote {
                 rgba(0, 0, 0, 0) 20%,
                 rgba(190, 140, 146, 0.1) 60%,
                 rgba(126, 108, 167, 0.2) 100%);
+    }
+
+    img {
+        display: block;
+        min-width: 350px;
+        max-height: 500px;
+        object-fit: contain;
+        margin: $spacing-unit auto 0;
+        border-radius: 5px;
     }
 }
 
