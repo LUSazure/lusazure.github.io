@@ -8,7 +8,7 @@
 @import url('//fonts.googleapis.com/earlyaccess/nanummyeongjo.css');
 
 
-/* ✨Custom LUS (Yes, that's me!) */
+/* ✨Custom LUS class (Yes, that's me!) */
 // I'll slap my nickname onto every class I use often on my posts.
 blockquote.lus-warning {
     color: $custom-warning-color;
@@ -29,7 +29,7 @@ blockquote.lus-warning {
     }
 }
 
-p.lus-noticable-p {
+p.lus-noticeable-p {
     text-align: center;
     padding: 5px 10px;
     width: fit-content;
@@ -61,12 +61,17 @@ div.lus-fitted-images-container {
 }
 
 
-/* ✨Custom layout */
+/* ✨Custom class */
 img.post-thumbnail {
     display: inline;
     position: relative;
     top: 0%;
     z-index: 0;
+}
+
+div.mini-post {
+    //display: inline-block;
+    background-color: #a07ecd;
 }
 
 // Chrome scroll bar
@@ -78,7 +83,7 @@ img.post-thumbnail {
     width: 10px;
 
     &:hover {
-        // 이거 외않되냐고? 하...
+        // 이 거 외않돼냐고? 하...
         width: 15px;
     }
 }
