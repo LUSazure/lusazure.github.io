@@ -1,28 +1,46 @@
 /* ✨Override base */
+
+body {
+    transition: 0.5s;
+    transition-timing-function: ease-out;
+}
+
 i,
 em {
     color: $brand-color;
 }
 
-mark {
-    color: $text-color;
-    background-color: $border-color-01;
+b,
+strong {
+    text-decoration: underline .7em $custom-emphasis-color-pale;
+    text-underline-offset: -.5em;
+    text-decoration-skip-ink: none;
+}
+
+s,
+del {
+    // Thanks pbarney on stackoverflow... You drastically decreased my anguish to feel.
+    text-decoration: underline 1px;
+    text-underline-offset: -.35em;
+    text-decoration-skip-ink: none;
 }
 
 hr {
     border: 0;
     margin: 3em 0;
     height: 2px;
-    background-image: linear-gradient(to right, rgba(0, 0, 0, 0), $border-color-02, rgba(0, 0, 0, 0));
+    background-image: linear-gradient(to right, rgba(0, 0, 0, 0), $border-color-03, rgba(0, 0, 0, 0));
 }
 
 figcaption {
     color: gray;
+    text-align: center;
+    margin-top: 5px;
 }
 
 pre,
 code {
-    border: none;
+    border: 1.5px solid $background-color;
     border-radius: 5px;
 }
 
@@ -33,10 +51,9 @@ blockquote {
     padding: $spacing-unit * .3 $spacing-unit * .5;
     background-image:
         linear-gradient(to right,
-            rgba(176, 132, 204, 0.2),
-            rgba(237, 191, 133, 0.2),
-            rgba(209, 239, 170, 0.2),
+            $border-color-01,
             rgba(0, 0, 0, 0));
+    box-shadow: 0 2px 10px 1px $custom-shadow-color;
 
     font-style: normal;
 
@@ -62,6 +79,7 @@ table {
 
 ::selection {
     color: white;
+    text-decoration-color: white;
     background: $custom-emphasis-color;
 }
 
@@ -80,24 +98,20 @@ table {
 
 .post-list-item {
     margin-bottom: 5vh;
-    background-color: $custom-background-color;
-    border-radius: 10px;
-    padding: 35px 20px 20px;
 
-    p {
-        position: relative;
-        z-index: 1;
+    background-color: $background-color;
+    background-position: right;
+    background-repeat: no-repeat;
+    background-size: 52%;
+
+    @media screen and (max-width: $on-medium) {
+        //background-size: contain;
+        background-size: cover;
     }
-}
 
-.post-meta {
-    position: relative;
-    z-index: 1;
-}
-
-.post-link {
-    position: relative;
-    z-index: 1;
+    box-shadow: 0 0 20px $custom-shadow-color;
+    border-radius: 10px;
+    padding: 35px 20px;
 }
 
 .task-list-item {
@@ -144,8 +158,11 @@ table {
         min-width: 340px;
         max-height: 500px;
         object-fit: contain;
-        margin: $spacing-unit auto 0;
+
         border-radius: 5px;
+        margin: $spacing-unit auto 0;
+
+        cursor: pointer;
     }
 }
 

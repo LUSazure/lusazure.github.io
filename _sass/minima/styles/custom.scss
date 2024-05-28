@@ -24,7 +24,6 @@ blockquote.lus-warning {
     &:before {
         font-weight: normal;
         content: "⚠️";
-        text-shadow: 0 0 3px;
         margin-right: $spacing-unit * .3;
     }
 }
@@ -34,23 +33,21 @@ p.lus-noticeable-p {
     padding: 5px 10px;
     width: fit-content;
     min-width: 10em;
-    background-color: $custom-background-color;
+    background-color: $code-background-color;
     border-radius: 5px;
     margin: 0 auto $spacing-unit;
 }
 
 div.lus-fitted-images-container {
-    // I stole it from stackoverflow
     white-space: nowrap;
     width: 100%;
     margin-top: 1em;
     margin-bottom: 15px;
-    display: table;
+    display: flex;
 
     div.lus-image {
-        vertical-align: middle;
         padding: 2px;
-        display: table-cell;
+        vertical-align: middle;
 
         img {
             width: 100%;
@@ -60,30 +57,62 @@ div.lus-fitted-images-container {
     }
 }
 
+img.lus-darken {
+    transition: filter 0.5s;
+    transition-timing-function: ease-out;
+
+    @if $color-scheme-auto {
+
+        // none
+        @media (prefers-color-scheme: dark) {
+            filter: brightness(50%);
+
+            &:hover {
+                filter: brightness(90%);
+            }
+        }
+    }
+
+    @else if $color-scheme-dark {
+        filter: brightness(50%);
+
+        &:hover {
+            filter: brightness(90%);
+        }
+    }
+
+    @else {
+        // none
+    }
+}
+
 
 /* ✨Custom class */
-img.post-thumbnail {
-    display: inline;
-    position: relative;
-    top: 0%;
-    z-index: 0;
+div.mini-posts-container {
+    // Thank you Mr. Web Designer on YouTube... for his Masonry layout tutorial.
+    columns: 2 350px;
+    column-gap: 5px;
+
+    div.mini-post {
+        padding: 35px 20px 20px;
+        border-radius: 10px;
+        border-top: 1px solid $border-color-02;
+        box-shadow: 0 2px 4px 1px $custom-shadow-color inset,
+            0 5px 15px $border-color-01 inset;
+        margin-bottom: 5px;
+        display: inline-block;
+    }
 }
 
-div.mini-post {
-    //display: inline-block;
-    background-color: #a07ecd;
-}
-
-// Chrome scroll bar
 ::-webkit-scrollbar-track {
-    background-color: $custom-background-color;
+    background-color: $code-background-color;
 }
 
 ::-webkit-scrollbar {
     width: 10px;
 
     &:hover {
-        // 이 거 외않돼냐고? 하...
+        // 이거 외않돼냐고? 하...
         width: 15px;
     }
 }
@@ -91,8 +120,8 @@ div.mini-post {
 ::-webkit-scrollbar-thumb {
     background: linear-gradient(315deg,
             #a07ecd,
-            $custom-background-color 100%);
-    border: 2px solid $custom-background-color;
+            $code-background-color 100%);
+    border: 2px solid $code-background-color;
     border-radius: 3px;
 
     min-height: 50px;

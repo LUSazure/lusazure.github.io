@@ -1,0 +1,89 @@
+// Light mode
+$lm-giscus-theme:                     "noborder_light";
+
+$lm-background-color-pale:          rgba(238, 238, 238, 0.6) !default;
+$lm-custom-shadow-color:            #bababa !default;
+
+$lm-custom-emphasis-color:          rgb(131, 149, 208) !default;
+$lm-custom-emphasis-color-pale:     rgba(131, 149, 208, 0.3) !default;
+
+$lm-custom-warning-color:           #c13535;
+
+// Dark mode
+$dm-giscus-theme:                     "noborder_gray";
+
+$dm-background-color-pale:          rgba(17, 17, 17, 0.7) !default;
+$dm-custom-shadow-color:            #000000 !default;
+
+$dm-custom-emphasis-color:          rgb(66, 88, 170) !default;
+$dm-custom-emphasis-color-pale:     rgba(66, 88, 170, 0.4) !default;
+
+$dm-custom-warning-color:           #e37171;
+
+
+
+// Mode selection
+// --------------
+
+// Classic skin (always light mode) - It's global!
+$giscus-theme:                  $lm-giscus-theme;
+
+$background-color-pale:         $lm-background-color-pale;
+$custom-shadow-color:           $lm-custom-shadow-color;
+
+$custom-emphasis-color:         $lm-custom-emphasis-color;
+$custom-emphasis-color-pale:    $lm-custom-emphasis-color-pale;
+
+$custom-warning-color:          $lm-custom-warning-color;
+
+@if $color-scheme-auto {
+
+    // Auto mode
+    :root {
+        --giscus-theme:                  $lm-giscus-theme;
+
+        --minima-background-color-pale:  #{$lm-background-color-pale};
+        --custom-shadow-color:           #{$lm-custom-shadow-color};
+        
+        --custom-emphasis-color:         #{$lm-custom-emphasis-color};
+        --custom-emphasis-color-pale:    #{$lm-custom-emphasis-color-pale};
+
+        --custom-warning-color:          #{$lm-custom-warning-color};
+    }
+    @media (prefers-color-scheme: dark) {
+        :root {
+            --giscus-theme:                         $dm-giscus-theme;
+
+            --minima-background-color-pale:         #{$dm-background-color-pale};
+            --custom-shadow-color:                  #{$dm-custom-shadow-color};
+
+            --custom-emphasis-color:                #{$dm-custom-emphasis-color};
+            --custom-emphasis-color-pale:           #{$dm-custom-emphasis-color-pale};
+
+            --custom-warning-color:                 #{$dm-custom-warning-color};
+        }
+    }
+    $giscus-theme:                  var(--giscus-theme);
+
+    $background-color-pale:         var(--minima-background-color-pale);
+    $custom-shadow-color:           var(--custom-shadow-color);
+
+    $custom-emphasis-color:         var(--custom-emphasis-color);
+    $custom-emphasis-color-pale:    var(--custom-emphasis-color-pale);
+
+    $custom-warning-color:          var(--custom-warning-color);
+
+} @else if $color-scheme-dark {
+
+    // Dark skin (always dark mode)
+    $giscus-theme:                  $dm-giscus-theme;
+
+    $background-color-pale:         $dm-background-color-pale;
+    $custom-shadow-color:           $dm-custom-shadow-color;
+    
+    $custom-emphasis-color:         $dm-custom-emphasis-color;
+    $custom-emphasis-color-pale:    $dm-custom-emphasis-color-pale;
+
+    $custom-warning-color:          $dm-custom-warning-color;
+
+}
