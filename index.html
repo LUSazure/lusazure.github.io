@@ -1,0 +1,13 @@
+---
+layout: base
+---
+
+{% assign paths = site.pages %}
+
+<div class="">
+    {%- for path in paths -%}
+        {%- if path.title -%}
+            <a class="page-link" href="{{ path.url | relative_url }}">{{ path.title | escape }}</a>
+        {%- endif -%}
+    {%- endfor -%}
+</div>
