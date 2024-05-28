@@ -2,8 +2,8 @@
 layout: post
 title: "저는 걸어다니는 사이비 종교입니다"
 lang: 
-tags: 
-thumbnail: Drawings\Scribbles\BirthOfMyself.png
+tags: one-man-cult
+thumbnail: Drawings/Scribbles/BirthOfMyself.png
 ---
 
 > 업보와 행복을 청산하여 돌려주고 고요히 영원한 죽음을 맞이하자
@@ -34,7 +34,7 @@ thumbnail: Drawings\Scribbles\BirthOfMyself.png
     저는 저를 표현하기 위해 저를 다시 구현했습니다
 </p>
 
-<img alt="" width="" src="\assets\images\embedded\Drawings\Scribbles\BirthOfMyself.png">
+<img alt="" width="" src="/assets/images/embedded/Drawings/Scribbles/BirthOfMyself.png">
 
 <p class="lus-noticeable-p" style="width: 60%;">
     LUSazure입니다<br>

@@ -9,8 +9,8 @@ thumbnail: OctoStare.gif
 헛소리는 자주 못 할 듯...
 
 <figure>
-<img alt="OctoStare" width="138px" src="\assets\images\embedded\OctoStare.gif">
-<figcaption lang="en">Reversible octopus plushie</figcaption>
+    <img alt="Octo Stare" width="138px" src="/assets/images/embedded/OctoStare.gif">
+    <figcaption lang="en">Reversible octopus plushie</figcaption>
 </figure>
 
 # 🦄🪸🎡🪭🪄🪅🎬🌭🧁🍹🪺🌌🏙️🛣️🌆🫧⛈️🌖🌈🌀🩷🪷

@@ -1,0 +1,23 @@
+- title: "순환의 불안"
+  date: "2024-05-17"
+  content: >-
+    컴퓨터 속에서 뭔가 순환하면 잘못되는 경우가 많아서, 순환을 보면 조금 불안해지는 증상이 나타나기 시작했다.
+
+- title: "그만 외로워지고 만 루스문"
+  date: "2024-05-19"
+  content: >-
+    방금까지 왁자지껄했던 예전 블로그 플랫폼 둘러보고 오니까, 뭔가 좀 외로운 듯 여기<br>
+    아님 <span lang="en">Creo</span> 님의 <span lang="en">Dark Tides</span> 듣고 있어서 분위기에 취한지도... ㅋㅋㅋ<br><br>
+    그리고 현황을 가끔씩 확인할 수 있는 분들이면 좀 괜찮은데, 옛날에 지인짜 좋아했고 지금도 좋아하지만 소식을 못 듣는 분들은 정말 사무치게 그립다<br>
+    닉네임 함부로 말하는 것도 안 됨... 그분 인생 잘 살아가게 놔둬야 돼
+
+- title: "범용적인 변수의 함정"
+  date: "2024-05-28"
+  content: >-
+    나는 변수명 앞에 자료형 없으면 더 헷갈리는데... 실제로 오른쪽에 들어간 값 보고 의식적으로 판단해야 돼서 ㅋㅋ<br>
+    <code class="language-plaintext highlighter-rouge">
+    int i = 0;
+    </code><br>
+    <code class="language-plaintext highlighter-rouge">
+    let i = 0;
+    </code>
