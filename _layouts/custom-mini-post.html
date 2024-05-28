@@ -1,0 +1,17 @@
+---
+layout: base
+---
+
+{{ content }}
+
+<div class="mini-posts-container">
+    {% for post in site.data.short-posts reversed %}
+        {% if post.title %}
+            <div class="mini-post">
+                <h2>{{ post.title }}</h2>
+                <h3>{{ post.date | date: "%b %-d, %Y" }}</h3>
+                <p>{{ post.content }}</p>
+            </div>
+        {% endif %}
+    {% endfor %} 
+</div>
